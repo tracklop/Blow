@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<%- include('../partials/head', { page_title: 'Blow' , css_files: [ 'map.css'
+	] , js_files: [ 'map.js' ] }); %>
+
+	<body>
+		<img src="/assets/images/favicon.png" class="logo" />
+
+		<div class="search-filter-container">
+			<input type="text" placeholder="Rechercher..." id="search-input" />
+			<div class="dropdown">
+				<button id="filter-button">Filtres</button>
+				<div id="dropdown-content" class="dropdown-content">
+					<% categories.forEach((item, index) => { %>
+					<label
+						><input type="checkbox" value="<%= item.id %>" /> <%= item.label
+						%></label
+					>
+					<% }) %>
+				</div>
+			</div>
+		</div>
+
+		<div class="map-container">
+			<div id="mapid"></div>
+		</div>
+
+		<nav class="navbar rounded-nav">
+			<a class="nav-link active" href="#">
+				<i class="fas fa-home fa-2x"></i>
+			</a>
+			<a class="nav-link" href="/event-form">
+				<i class="fas fa-plus-circle fa-2x"></i>
+			</a>
+			<a class="nav-link" href="#">
+				<i class="fas fa-user-circle fa-2x"></i>
+			</a>
+		</nav>
+
+		<% events.forEach((item, index) => { %>
+		<textarea
+			type="text"
+			id="event-<%= item.id %>"
+			class="event hidden"
+			value="<%= JSON.stringify(item) %>"
+		></textarea>
+		<% }) %>
+	</body>
+</html>

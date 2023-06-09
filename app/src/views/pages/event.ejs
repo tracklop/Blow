@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<%- include('../partials/head', { page_title: 'Blow' , css_files: [
+	'event_form.css' ] , js_files: [ 'address.js' ] }); %>
+
+	<body>
+		<img src="/assets/images/favicon.png" class="logo" />
+
+		<div class="container create-event-container">
+			<h2 class="text-center">Créer un événement</h2>
+
+			<form id="create-event-form" action="/create-event" method="POST">
+				<div class="form-group">
+					<label for="name">Nom de l'événement</label>
+					<input type="text" id="name" name="name" class="form-control" required />
+				</div>
+
+				<div class="form-group">
+					<label for="size">Taille de l'événement</label>
+					<input type="number" id="size" name="size" class="form-control" required />
+				</div>
+
+				<div class="form-group">
+					<label for="description">Description</label>
+					<textarea
+						id="description"
+                        name="description"
+						class="form-control"
+						rows="3"
+						required
+					></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="event_date">Date de l'événement</label>
+					<input
+						type="datetime-local"
+						id="event_date"
+                        name="event_date"
+						class="form-control"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="address">Adresse</label>
+                    <div id="address" class="form-control autocomplete-container"></div>
+
+					<input type="text" id="hidden-address" name="address" class="hidden" required />
+					<input type="text" id="hidden-coordinates" name="coordinates" class="hidden" required />
+				</div>
+
+				<div class="form-group">
+					<label for="category_id">Catégorie</label>
+					<select id="category_id" name="category" class="form-control" required>
+						<option value="" selected disabled>Choisir une catégorie</option>
+						<% categories.forEach((item, index) => { %>
+						<option value="<%= item.id %>"><%= item.label %></option>
+						<% }) %>
+					</select>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-block">
+					Créer un événement
+				</button>
+			</form>
+		</div>
+
+		<nav class="navbar rounded-nav">
+			<a class="nav-link" href="/home">
+				<i class="fas fa-home fa-2x"></i>
+			</a>
+			<a class="nav-link active" href="#">
+				<i class="fas fa-plus-circle fa-2x"></i>
+			</a>
+			<a class="nav-link" href="#">
+				<i class="fas fa-user-circle fa-2x"></i>
+			</a>
+		</nav>
+	</body>
+</html>

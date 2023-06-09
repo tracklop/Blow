@@ -1,0 +1,101 @@
+/* ===== IMPORTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@font-face {
+	font-family: "AirbnbCereal_W_Bd";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Bd.otf")
+		format("opentype");
+}
+
+@font-face {
+	font-family: "AirbnbCereal_W_Bk";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Bk.otf")
+		format("opentype");
+}
+
+@font-face {
+	font-family: "AirbnbCereal_W_Blk";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Blk.otf")
+		format("opentype");
+}
+
+@font-face {
+	font-family: "AirbnbCereal_W_Lt";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Lt.otf")
+		format("opentype");
+}
+
+@font-face {
+	font-family: "AirbnbCereal_W_Md";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_Md.otf")
+		format("opentype");
+}
+
+@font-face {
+	font-family: "AirbnbCereal_W_XBd";
+	src: url("../fonts/airbnb-cereal-font/AirbnbCereal_W_XBd.otf")
+		format("opentype");
+}
+
+/* ===== ROOT ===== */
+
+:root {
+	--main-font-family: "AirbnbCereal_W_Bk", "Helvetica Neue", sans-serif;
+	--main-bg: #ddd;
+
+	/* TODO - ... */
+}
+
+[data-theme="dark"] {
+	/* TODO - ... */
+}
+
+/* ===== RESET ===== */
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+/* ===== BASICS ===== */
+
+body {
+	font-family: var(--main-font-family);
+	scroll-behavior: smooth;
+	background-color: var(--main-bg);
+	transition: background-color 0.25s;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 45px;
+	text-align: center;
+	color: #5669ff;
+}
+
+.hidden,
+.hidden * {
+	display: none;
+}
+
+select option:checked,
+select option:disabled {
+	display: none;
+}
+
+/* ===== GENERAL ===== */
+
+.logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 50px;
+}

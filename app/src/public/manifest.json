@@ -1,0 +1,22 @@
+{
+	"short_name": "Blow",
+	"name": "Blow - Events Planner",
+	"description": "An event planner application that allows you to create events and invite your friends.",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#7346f1",
+	"theme_color": "#7346f1",
+	"icons": [
+		{
+			"src": "./assets/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./assets/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+.rounded-nav {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	border-radius: 30px;
+	padding: 10px 30px;
+	justify-content: space-around;
+	background-color: #f8f9fa;
+}
+.nav-link {
+	color: #495057;
+}
+.nav-link.active {
+	color: #7346f1;
+}
